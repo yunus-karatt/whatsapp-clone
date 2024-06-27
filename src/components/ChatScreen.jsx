@@ -6,9 +6,12 @@ import lense from "../assets/search.svg";
 import smiley from "../assets/smiley.svg";
 import paperClip from "../assets/paperClip.svg";
 import mic from "../assets/mic.svg";
+import bg from "../assets/wapp-bg.jpg"
 const ChatScreen = () => {
   return (
     <section className="relative w-full ms-16 md:ms-0">
+
+      {/* chat contact details */}
       <div className="w-full h-16 bg-white border border-l-0 flex justify-between items-center px-5">
         <div className="flex gap-4">
           <div className="w-10 h-10 rounded-full border flex justify-center items-center">
@@ -42,7 +45,20 @@ const ChatScreen = () => {
         </div>
       </div>
 
-      <div className="w-full h-12 bg-white absolute bottom-1 border flex justify-between items-center px-5 gap-4">
+      {/* chats */}
+      <div
+      className="w-full h-full px-5"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
+        <div className="bg-white w-fit p-1 rounded-sm">
+          <span>hi,how are you</span>
+        </div>
+      </div>
+      {/* chat typing */}
+      <div className="w-full h-12 bg-white absolute bottom-0 border flex justify-between items-center px-5 gap-4">
         <div className="flex gap-4">
           <button>
             <img src={smiley} alt="icon" />
